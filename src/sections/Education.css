@@ -1,0 +1,131 @@
+/* Education Section */
+.education-section {
+  background-color: #FFFFFF; /* White background */
+  color: #433878; /* Primary text color */
+  padding: 4rem 1rem;
+  text-align: center;
+  min-height: 100vh; /* Ensure full height */
+}
+
+/* Heading style */
+.education-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #7E60BF; /* Secondary color for heading */
+  animation: fadeIn 1s ease-in-out; /* Animation on load */
+}
+
+/* Education timeline container */
+.education-path {
+  position: relative;
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 800px; /* Constrain width */
+}
+
+/* Timeline vertical line */
+.education-path::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 4px;
+  background-color: #E4B1F0; /* Accent color for line */
+  transform: translateX(-50%);
+}
+
+/* Education point styles */
+.education-point {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4rem;
+  position: relative;
+  width: 100%;
+}
+
+/* Circle for each education point */
+.circle {
+  width: 20px;
+  height: 20px;
+  background-color: #7E60BF; /* Secondary color for circles */
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* Education details box */
+.education-details {
+  background-color: #FFE1FF; /* Highlight color for details */
+  color: #433878; /* Primary color for text */
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Positioning left and right for alternate points */
+.education-point:nth-child(odd) .education-details {
+  left: -55%;
+}
+.education-point:nth-child(even) .education-details {
+  left: 5%;
+}
+
+/* Degree and institution styles */
+.degree {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.institution {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
+.cgpa {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .education-section h2 {
+    font-size: 2rem; /* Adjust heading size */
+  }
+
+  .education-point {
+    margin: 2rem 0; /* Adjust spacing */
+  }
+
+  .education-details {
+    left: 0 !important; /* Align details centrally */
+    width: 100%; /* Full width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .education-section h2 {
+    font-size: 1.8rem; /* Further adjust heading size */
+  }
+
+  .education-details {
+    width: 100%; /* Full width for mobile */
+  }
+}

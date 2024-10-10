@@ -1,0 +1,78 @@
+/* Skills Section */
+#skills {
+  background-color: white; /* White background */
+  color: #433878; /* Dark blue text color */
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+/* Heading style */
+#skills h2 {
+  color: #7E60BF; /* Light purple heading color */
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Skills container styles */
+.skills-container {
+  display: flex;
+  flex-direction: column; /* Vertical layout */
+  gap: 2rem; /* Space between skill items */
+  align-items: center;
+}
+
+/* Individual skill styles */
+.skill {
+  background-color: #E4B1F0; /* Light purple background for each skill */
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 80%; /* Width of the skill card */
+  position: relative;
+}
+
+/* Skill name style */
+.skill-name {
+  font-size: 1.5rem; /* Name font size */
+  margin-bottom: 0.5rem;
+  color: #433878; /* Dark blue color for skill names */
+}
+
+/* Skill level container */
+.skill-level {
+  background-color: #FFE1FF; /* Soft pink background for progress bar */
+  border-radius: 10px;
+  overflow: hidden;
+  height: 20px; /* Height of the progress bar */
+}
+
+/* Skill progress style */
+.skill-progress {
+  background-color: #7E60BF; /* Darker purple for progress bar color */
+  height: 100%; /* Full height */
+}
+
+/* Skill percentage style */
+.skill-percentage {
+  position: absolute; /* Position percentage text */
+  right: 10px; /* Right alignment */
+  top: 0; /* Align to top of the skill */
+  font-weight: bold;
+  color: #433878; /* Dark blue for percentage text */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  #skills h2 {
+      font-size: 2rem; /* Adjust heading size */
+  }
+
+  .skill {
+      width: 90%; /* Adjust skill card width for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  #skills h2 {
+      font-size: 1.8rem; /* Further adjust heading size */
+  }
+}

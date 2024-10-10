@@ -1,0 +1,64 @@
+/* Footer container */
+.animated-footer {
+  background-color: #7E60BF; /* Updated footer background color */
+  color: #FFE1FF;  /* Updated footer text color */
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Footer Text Animation */
+.animated-footer p {
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  font-size: 1.2rem;
+  animation: fadeInText 2s ease-in-out forwards;
+}
+
+/* Text fade-in animation */
+@keyframes fadeInText {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Footer Background Animation */
+.animated-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 300%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0));
+  animation: animateBackground 6s linear infinite;
+}
+
+/* Background animation effect */
+@keyframes animateBackground {
+  0% {
+      left: -100%;
+  }
+  100% {
+      left: 100%;
+  }
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 768px) {
+  .animated-footer {
+      padding: 1.5rem 0;
+  }
+
+  .animated-footer p {
+      font-size: 1rem;
+  }
+}

@@ -1,0 +1,90 @@
+/* Home Section */
+#home {
+  background-color: #FFFFFF; /* White background */
+  color: #433878; /* Dark blue text color */
+  padding: 4rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Full viewport height */
+}
+
+/* Hero layout */
+.hero {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  max-width: 1200px; /* Max width for larger screens */
+  width: 100%; /* Full width */
+  margin: 0 auto; /* Center horizontally */
+}
+
+/* Profile image styles */
+.profile-container {
+  flex: 1; /* Take up one part of the flex container */
+  display: flex;
+  justify-content: center; /* Center image horizontally */
+}
+
+.profile-image {
+  border-radius: 50%; /* Circular image */
+  width: 450px; /* Size of the profile image */
+  height: 450px; /* Ensure it's a circle */
+  object-fit: cover; /* Cover the container without distortion */
+}
+
+/* Text container styles */
+.text-container {
+  flex: 2; /* Take up two parts of the flex container */
+  padding-left: 2rem; /* Space between image and text */
+}
+
+/* Name styles */
+.name {
+  font-size: 2.5rem; /* Name font size */
+  margin-bottom: 2rem; /* Space below name */
+  color: #7E60BF; /* Purple color for the name */
+}
+
+/* Resume button styles */
+.resume-button {
+  background-color: #7E60BF; /* Button color */
+  color: #FFFFFF; /* White text color */
+  padding: 0.5rem 1.5rem; /* Padding for the button */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  font-size: 1rem; /* Font size */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+/* Button hover effect */
+.resume-button:hover {
+  background-color: #FFE1FF; /* Light pink color on hover */
+  color: #433878; /* Change text color on hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  #home {
+      flex-direction: column; /* Stack items vertically on small screens */
+      text-align: center; /* Center text */
+  }
+
+  .hero {
+      flex-direction: column; /* Stack image and text vertically */
+  }
+
+  .profile-image {
+      width: 120px; /* Smaller size on small screens */
+      height: 120px; /* Ensure it's a circle */
+  }
+}
+
+@media (max-width: 480px) {
+  .name {
+      font-size: 2rem; /* Further adjust heading size */
+  }
+
+  .resume-button {
+      font-size: 0.9rem; /* Adjust button font size */
+  }
+}

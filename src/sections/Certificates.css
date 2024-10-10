@@ -1,0 +1,84 @@
+/* Certificates Section */
+.certificates-section {
+  background-color: #FFFFFF; /* White background color */
+  color: #433878; /* Updated text color */
+  padding: 3rem 1rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* Heading style */
+.certificates-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #7E60BF; /* Updated heading color */
+  text-transform: uppercase;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* List style */
+.certificates-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.certificates-list li {
+  background-color: #E4B1F0; /* Updated certificate card background */
+  color: #433878; /* Updated text color for cards */
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 600px;
+  transition: transform 0.3s ease-in-out;
+  animation: fadeInUp 1.5s ease forwards;
+}
+
+/* Certificate card hover effect */
+.certificates-list li:hover {
+  background-color: #FFE1FF; /* Hover background color for cards */
+  transform: translateY(-10px);
+}
+
+/* Link style */
+.certificates-list li a {
+  color: #FFFFFF; /* Updated link color for better contrast */
+  background-color: #433878; /* Updated button background color */
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Button hover effect */
+.certificates-list li a:hover {
+  background-color: #7E60BF; /* Updated hover background color for buttons */
+}
+
+/* Animation styles */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

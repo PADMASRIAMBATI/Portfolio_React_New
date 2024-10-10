@@ -1,0 +1,79 @@
+/* Main header container */
+.animated-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #433878; /* Updated header background */
+  padding: 1rem;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar links container */
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Navbar links */
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links li a {
+  color: #E4B1F0; /* Updated lighter color for text */
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect for links */
+.nav-links li a:hover {
+  color: #FFE1FF; /* Updated hover color */
+}
+
+/* Adding underline on hover */
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #7E60BF; /* Updated underline color */
+  left: 50%;
+  bottom: -4px;
+  transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+}
+
+/* Full underline on hover */
+.nav-links li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Responsive design for mobile screens */
+@media (max-width: 768px) {
+  .nav-links {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .nav-links li {
+      margin: 0.5rem 0;
+  }
+
+  .nav-links li a {
+      font-size: 1rem;
+  }
+}
+
+/* Sticky effect: Make header shrink slightly when scrolling */
+.animated-header.scrolled {
+  background-color: #7E60BF; /* Updated background on scroll */
+  padding: 0.7rem;
+}

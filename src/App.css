@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Body styles */
+body {
+  font-family: 'Arial', sans-serif; /* Use your preferred font */
+  background-color: #FFFFFF; /* Light background color */
+  color: #112D32; /* Text color */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Header styles */
+header nav ul {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+  list-style: none;
+  padding: 0;
+}
+
+header nav ul li {
+  margin: 0 1rem;
+}
+
+/* Main section styles */
+main section {
+  padding: 4rem 2rem; /* Default padding for larger screens */
+  min-height: 100vh; /* Ensure each section takes full height */
+}
+
+/* Home Section */
+#home {
+  background-color: #112D32; /* Dark background */
+  color: #88BDBC; /* Light text color */
+  padding: 4rem 1rem; /* Padding for the home section */
+}
+
+/* Other sections (like education, experience, etc.) */
+section {
+  padding: 2rem 1rem; /* Adjust padding for other sections */
+}
+
+/* Example for specific sections like Experience */
+#experience, #projects, #skills, #education, #contact {
+  padding: 2rem 1rem; /* Standardize padding */
+}
+
+/* Heading styles */
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #333;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Hero layout */
+.hero {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  max-width: 1200px; /* Max width for larger screens */
+  width: 100%; /* Full width */
+  margin: 0 auto; /* Center horizontally */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Media Queries for Tablets */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column; /* Stack navigation items */
   }
-  to {
-    transform: rotate(360deg);
+
+  main section {
+    padding: 3rem 1.5rem; /* Reduce padding for tablet */
+  }
+
+  h2 {
+    font-size: 1.8rem; /* Adjust heading size */
+  }
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 480px) {
+  header nav ul {
+    flex-direction: column; /* Stack navigation items */
+  }
+
+  header nav ul li {
+    margin: 0.5rem 0; /* Adjust margin for list items */
+  }
+
+  main section {
+    padding: 2rem 1rem; /* Reduce padding for mobile */
+  }
+
+  h2 {
+    font-size: 1.5rem; /* Adjust heading size */
+  }
+
+  footer {
+    font-size: 0.8rem; /* Smaller footer text */
   }
 }

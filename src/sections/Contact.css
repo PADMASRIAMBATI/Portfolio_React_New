@@ -1,0 +1,102 @@
+/* Contact Section */
+.contact-section {
+  background-color: #FFFFFF; /* White background */
+  color: #433878; /* Dark text color */
+  padding: 4rem 1rem;
+  text-align: center;
+  min-height: 100vh; /* Ensure full height */
+}
+
+/* Heading style */
+.contact-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #7E60BF; /* Updated heading color */
+  animation: fadeIn 1s ease-in-out; /* Animation on load */
+}
+
+/* Form styles */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem; /* Space between form elements */
+  max-width: 500px; /* Maximum width for form */
+  margin: 0 auto; /* Center form */
+}
+
+/* Input and textarea styles */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  transition: box-shadow 0.3s ease;
+  background-color: #E4B1F0; /* Light purple input background */
+  color: #433878; /* Dark input text color */
+}
+
+/* Focus effect */
+.contact-form input:focus,
+.contact-form textarea:focus {
+  box-shadow: 0 0 10px #7E60BF; /* Shadow effect on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Button styles */
+.contact-form button {
+  background-color: #FFE1FF; /* Light pink button background */
+  color: #433878; /* Dark button text color */
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button hover effect */
+.contact-form button:hover {
+  background-color: #7E60BF; /* Change button color on hover */
+  color: white; /* Change text color on hover */
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .contact-section h2 {
+      font-size: 2rem; /* Adjust heading size */
+  }
+
+  .contact-form {
+      gap: 1rem; /* Reduce gap */
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section h2 {
+      font-size: 1.8rem; /* Further adjust heading size */
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+      padding: 0.8rem; /* Adjust padding */
+  }
+
+  .contact-form button {
+      padding: 0.8rem 1.5rem; /* Adjust button padding */
+      font-size: 0.9rem; /* Adjust button size */
+  }
+}
